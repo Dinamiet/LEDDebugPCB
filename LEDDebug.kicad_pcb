@@ -39,6 +39,45 @@
 		(55 "User.9" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
@@ -82,6 +121,7 @@
 			(outputdirectory "")
 		)
 	)
+	(property "VERSION" "01.00")
 	(net 0 "")
 	(net 1 "Net-(D1-K)")
 	(net 2 "Net-(D2-K)")
@@ -4920,6 +4960,31 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "e3aa7083-5ff5-4df4-97b8-f8301eb20228")
+	)
+	(gr_text "GND"
+		(at 59.563 60.57 0)
+		(layer "F.SilkS")
+		(uuid "02a0075b-0ffe-466f-a8f4-5300a488b691")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "${VERSION}"
+		(at 64.262 61.087 0)
+		(layer "B.SilkS")
+		(uuid "c968cf55-bed0-46e4-95cb-04d8e4cc2965")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
 	)
 	(via
 		(at 66.9875 40.25)

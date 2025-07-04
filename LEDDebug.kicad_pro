@@ -502,7 +502,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/tmp/LEDDebug/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -636,5 +636,7 @@
       "Root"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "VERSION": "01.00"
+  }
 }
